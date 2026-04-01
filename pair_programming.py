@@ -1,9 +1,14 @@
 # FEET TO METERS HOORAY
-feet = int(input("Please enter a number (feet): "))
-inches = int(input("Please enter a number (inches): "))/12 #converts inches to feet
+def feet_inches_to_meters(feet, inches):
+    """Convert feet and inches to meeters"""
 
-feetinch = feet + inches #combining the feet and inches values
-meter = feetinch/3.281  #converting to meters
+    feetinch = feet + (inches/12) #combining the feet and inches values
+    meter = feetinch/3.281  #converting to meters
+    
+    return meter
 
-print("Height in feet:", feetinch) #prints values
-print("Meter value:", meter)
+# . . No defensive programming
+# . . No function, but inputs described
+# . . Did not handle rounding, failed one test from rounding discrepancy
+
+# . . Takes live inputs, well commented
